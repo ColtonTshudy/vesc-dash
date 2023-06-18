@@ -13,6 +13,7 @@ Software/Firmware:
 * Raspbian 11 (bullseye) for arm64 aml s905x
 * can-utils 2020.11.0-1 
 <br /><br />
+
 Hardware:
 * vesc hw revision 6
 * Le Potato 2GB s905x
