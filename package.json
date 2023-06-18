@@ -2,7 +2,10 @@
   "name": "vesc-dash",
   "version": "0.1.0",
   "private": true,
+  "main": "public/electron.js",
+  "homepage": "./",
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "@emotion/styled": "^11.11.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -10,12 +13,11 @@
     "canvas-gauges": "^2.1.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "craco build",
+    "start": "electron .",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,6 +40,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "electron": "^25.1.1",
+    "webpack-node-externals": "^3.0.0"
   }
 }
