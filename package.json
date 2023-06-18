@@ -16,10 +16,13 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "build": "craco build",
-    "start": "electron .",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "ebuild": "craco build",
+    "estart": "electron .",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+    
   },
   "eslintConfig": {
     "extends": [
