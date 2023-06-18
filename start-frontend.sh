@@ -1,6 +1,6 @@
-(cd /home/tomos/Projects/VESCDash/vesc-dash/build) &
+cd /home/tomos/Projects/VESCDash/vesc-dash
 DISPLAY=:0 xdotool mousemove 2000 2000
-DISPLAY=:0 npm run start #Electron renderer
+DISPLAY=:0 npm run estart #Electron renderer
 # DISPLAY=:0 firefox --kiosk http://localhost:5051 #Browser renderer
 
 # Add this (../build <here> ) & if you want to use browser renderer 
