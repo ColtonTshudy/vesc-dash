@@ -4,7 +4,7 @@ import { LinearGauge } from 'canvas-gauges';
 const TemperatureGauge = ({ className, value, min, max, size }) => {
     const canvasRef = useRef();
     const gaugeRef = useRef();
-    const danger = 0.5; // Start making number red at this percent
+    // const danger = 0.5; // Start making number red at this percent
 
     const height = size * 2
     const width = size / 2

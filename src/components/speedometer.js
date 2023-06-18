@@ -46,7 +46,7 @@ const Speedometer = ({ className, value, min, max, ticks, size }) => {
         return () => {
             gaugeRef.current.destroy();
         };
-    }, [value]);
+    }, [value, max, min, size, ticks]);
 
     return (
         <>

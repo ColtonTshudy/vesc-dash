@@ -1,4 +1,5 @@
 import './App.css';
+import './Fonts.css';
 import React, { useState, useEffect } from 'react';
 
 import TemperatureGauge from './components/temperature.js';
