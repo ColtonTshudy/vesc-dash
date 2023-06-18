@@ -4,7 +4,7 @@ Raspberry Pi 3 based VESC dashboard
 
 ## Versions
 This project was created and verified with the following versions:
-<br />
+<br /><br />
 Software/Firmware:
 * Node 18.16.0
 * npm 9.5.1
