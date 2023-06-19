@@ -37,7 +37,7 @@ const TemperatureGauge = ({ className, value, min, max, size }) => {
 
             barProgress: true,
             barStrokeWidth: 0,
-            colorBarProgress: 'pink',
+            colorBarProgress: 'tomato',
             colorBar: 'rgb(0,0,0,0.5)',
             needle: true,
             needleSide: 'right',

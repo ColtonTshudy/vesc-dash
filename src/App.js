@@ -1,5 +1,6 @@
 import './App.css';
 import './Fonts.css';
+import './Texture.css'
 import React, { useState, useEffect } from 'react';
 
 import TemperatureGauge from './components/temperature.js';
@@ -28,7 +29,8 @@ function App() {
 
     return (
         <div className="center-screen">
-            <div className="viewport flex-container">
+            <div className="viewport bg-texture-5 flex-container">
+                <div className='viewport-overlay' />
                 <label className="background">Moped Guage App</label>
 
                 {/* Uncomment this for full CANbus debug information */}
