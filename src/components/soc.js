@@ -5,10 +5,14 @@ const SoC = ({ className, value, size }) => {
     const canvasRef = useRef();
     const gaugeRef = useRef();
 
+    let val = value
+    if (isNaN(value))
+        val = 0.01
+    
     const height = size * 2
     const width = size / 3
-    var justify = Math.floor(Math.log10(value)) < 1 ? 'center' : 'left'
-
+    var justify = Math.floor(Math.log10(val)) < 1 ? 'center' : 'left'
+    
     useEffect(() => {
         gaugeRef.current = new LinearGauge({
             renderTo: canvasRef.current,
@@ -23,12 +27,12 @@ const SoC = ({ className, value, size }) => {
             borders: false,
             colorPlate: 'rgb(0,0,0,0)',
 
-            value: value * 100 - 1,
+            value: val * 100 - 1,
             valueBox: false,
 
             barProgress: true,
             barStrokeWidth: 0,
-            colorBarProgress: `rgb(${255 * (1 - value + 0.5)},${255 * (value + .4)},${100},1)`,
+            colorBarProgress: `rgb(${255 * (1 - val + 0.5)},${255 * (val + .4)},${100},1)`,
             colorBar: 'rgb(0,0,0,0.5)',
             needle: false,
             barBeginCircle: false,
@@ -55,9 +59,9 @@ const SoC = ({ className, value, size }) => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: justify,
-                textShadow: '0 0 10px black',
+                textShadow: '0 0 10px black, 0 0 10px black',
             }}>
-                {Math.floor(value*100)-1}
+                {Math.floor(val*100)-1}
             </div>
         </div >
     )

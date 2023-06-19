@@ -6,9 +6,13 @@ const TemperatureGauge = ({ className, value, min, max, size }) => {
     const gaugeRef = useRef();
     // const danger = 0.5; // Start making number red at this percent
 
+    let val = value
+    if (isNaN(value))
+        val = 0
+
     const height = size * 2
     const width = size / 2
-    var justify = Math.floor(Math.log10(value)) < 1 ? 'center' : 'left'
+    var justify = Math.floor(Math.log10(val)) < 1 ? 'center' : 'left'
 
     // let valColor = `rgb(255,${255 * (max * danger) / value},${255 * (max * danger) / value})`
     // if (isNaN(valColor))
@@ -28,7 +32,7 @@ const TemperatureGauge = ({ className, value, min, max, size }) => {
             borders: false,
             colorPlate: 'rgb(0,0,0,0)',
 
-            value: value,
+            value: val,
             valueBox: false,
 
             barProgress: true,
@@ -63,9 +67,9 @@ const TemperatureGauge = ({ className, value, min, max, size }) => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: justify,
-                textShadow: '0 0 10px black',
+                textShadow: '0 0 10px black, 0 0 10px black',
             }}>
-                {Math.floor(value)}
+                {Math.floor(val)}
             </div>
         </div >
     )

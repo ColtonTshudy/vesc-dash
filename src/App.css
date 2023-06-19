@@ -14,9 +14,10 @@
 
 .viewport {
   /* background: rgb(33, 44, 56); */
+  /* background: radial-gradient(#3f4866 35%, black 100%); */
   width: 1024px;
   height: 600px;
-  background: radial-gradient(#3f4866 35%, black 100%);
+  background: radial-gradient(white 35%, black 100%);
   color: white;
   overflow: hidden;
   position: relative;
@@ -147,16 +148,10 @@
   left: 50%;
 }
 
-.clock {
-  position: relative;
-  text-align: center;
-  font-size: 40px;
-  bottom: 0px;
-}
-
 .clock-new {
   bottom: 0%;
   left: 50%;
+  text-shadow: 4px 4px 5px black;
 }
 
 #motor-icon {
@@ -238,6 +233,7 @@
   box-shadow: 0px 3px 10px 2px black,
     inset 0 0 20px 3px black;
   z-index: 10;
+  text-shadow: 2px 2px 4px black;
 }
 
 .speed-ro {

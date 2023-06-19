@@ -46,7 +46,7 @@ const Speedometer = ({ className, value, min, max, ticks, size }) => {
         return () => {
             gaugeRef.current.destroy();
         };
-    }, [value, max, min, size, ticks]);
+    });
 
     return (
         <>
@@ -62,6 +62,7 @@ const Speedometer = ({ className, value, min, max, ticks, size }) => {
                 borderRadius: '50%',
                 boxShadow:
                     `inset -20px -20px 50px 50px rgb(33, 44, 56),` +
+                    `inset -15px -15px 10px 20px black,` +
                     `0 0 20px 5px black,` +
                     `0 0 50px 20px white`,
                 zIndex: 5,
@@ -73,7 +74,7 @@ const Speedometer = ({ className, value, min, max, ticks, size }) => {
                 height: size,
                 borderRadius: '50%',
                 boxShadow: `inset 0 0 50px 30px black, ` +
-                    `0 0 1px 2px rgb(33, 44, 56)`,
+                    `0 0 1px 2px black`,
                 zIndex: 5,
             }} />
         </>

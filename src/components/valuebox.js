@@ -12,7 +12,7 @@ const ValueBox = ({ className, value, units, fontsize, width, decimals, justify 
     const decimal_mp = Math.pow(10, decimals);
     let display = padZeros(decimals, Math.round(value * decimal_mp) / decimal_mp)
 
-    if (isNaN(value))
+    if (isNaN(display))
         display = value
 
     return (
