@@ -37,7 +37,8 @@ const RadialBar = ({
     showValue=false,
     units,
 }) => {
-    const percentage = Math.abs((value - min) / (max - min));
+    let val = Math.min(Math.max(value, min), max);
+    const percentage = Math.abs((val - min) / (max - min));
     const PI = 3.14
     const R = (radius - strokeWidth) / 2
     const xScale = mirror ? -1 : 1

@@ -21,6 +21,13 @@ function App() {
     const [data, setData] = useState({})
     const [config, setConfig] = useState({})
 
+    // Connect and recieve CAN data from socket
+    // NOTE: this is inefficient. 
+    // It updates the data state, which refreshes ALL gui elements.
+    // Ideally, only the elements that change should be updated.
+    // This would require a major rewrite, where each component
+    // is specialized and has a socket connection within the
+    // component specifically for its data crumb
     useEffect(() => {
         const socket = new Socket(5002)
 
