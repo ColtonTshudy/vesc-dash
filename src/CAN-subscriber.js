@@ -12,6 +12,9 @@ import { io } from 'socket.io-client'
 //   odometer, SoC, expected range, average kW, etc
 // - add heat sink to raspi, flip raspi mount location
 //   upside down a la controls box to keep watertight
+// - add "CAN OK" statuses to check which packets are coming in
+// - add realtime kW consumption RO for motor & battery,
+//   also show percentage efficiency
 
 
 class Socket {
