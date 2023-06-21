@@ -37,7 +37,10 @@ const RadialBar = ({
     showValue=false,
     units,
 }) => {
-    let val = Math.min(Math.max(value, min), max);
+    // Clamp to range, allow for negative numbers if bottom range is 0
+    let val = min === 0 ? Math.min(value, max) : Math.min(Math.max(value, min), max);
+    // Clamp negative range to -max
+    val = val < 0 ? Math.max(value, -max) : val;
     const percentage = Math.abs((val - min) / (max - min));
     const PI = 3.14
     const R = (radius - strokeWidth) / 2
