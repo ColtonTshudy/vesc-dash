@@ -103,7 +103,7 @@ const RadialBar = ({
                     />
                 </svg>
             </CircleContainer>
-            <text className='font-face-rubik' style={{
+            <div className='font-face-rubik' style={{
                 bottom: `${ty}`,
                 left: `${tx}`,
                 position: 'absolute',
@@ -112,13 +112,13 @@ const RadialBar = ({
                 visibility: `${textVisible}`,
             }}>
                 {Math.trunc(value)} {units}
-            </text>
+            </div>
         </div>
     )
 }
 
 RadialBar.propTypes = {
-    value: PropTypes.number.isRequired,
+    value: PropTypes.number,
     width: PropTypes.number,
     strokeWidth: PropTypes.number,
     strokeLinecap: PropTypes.oneOf(['round', 'square', 'butt']),
@@ -139,7 +139,7 @@ RadialBar.defaultProps = {
     fontColor: 'inherit',
     fontFamily: 'inherit',
     primaryColor: ['#00BBFF', '#92d7f1'],
-    secondaryColor: 'transparent',
+    secondaryColor: ['rgb(0,0,0,0)', 'rgb(0,0,0,0)'],
     fill: 'transparent',
 }
 
