@@ -22,3 +22,9 @@ function createWindow() {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on("ready", createWindow);
+
+// Workaround to close all processes / sub-processes after closing the app
+electron.app.once('window-all-closed', electron.app.quit);
+electron.app.once('before-quit', () => {
+    window.removeAllListeners('close');
+});
