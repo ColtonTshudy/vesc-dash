@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { RadialGauge } from 'canvas-gauges';
 
-const Speedometer = ({ className, value, min, max, ticks, size }) => {
+const Speedometer = ({ className, value=0, min=0, max=0, ticks=0, size }) => {
     const canvasRef = useRef();
     const gaugeRef = useRef();
 

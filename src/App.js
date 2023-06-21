@@ -31,8 +31,16 @@ function App() {
     useEffect(() => {
         const socket = new Socket(5002)
 
-        socket.getSocket().on('data', (canData) => {
-            setData(canData)
+        socket.getSocket().on('data', (data) => {
+            setData(data)
+        })
+
+        socket.getSocket().on('config', (config) => {
+            setConfig({
+                'capacity_ah': config['battery']['capacity_ah'],
+                'max_speed': config['dash']['max_speed']
+            })
+            console.log(config)
         })
 
         return () => {
@@ -40,8 +48,8 @@ function App() {
         }
     }, [])
 
-    const max_speed = 50;
-    const capacity_ah = 16;
+    const max_speed = config['max_speed'];
+    const capacity_ah = config['capacity_ah'];
     const soc = (capacity_ah - data.ah_consumed) / capacity_ah
 
     return (
