@@ -15,6 +15,7 @@ import { io } from 'socket.io-client'
 // - add "CAN OK" statuses to check which packets are coming in
 // - add realtime kW consumption RO for motor & battery,
 //   also show percentage efficiency
+// - change shape of acrylic (head bend) to not reflect sunlight
 
 
 class Socket {
