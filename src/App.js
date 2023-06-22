@@ -51,8 +51,8 @@ function App() {
     const max_speed = config['max_speed'];
     const capacity_ah = config['capacity_ah'];
     const soc = (capacity_ah - data.ah_consumed) / capacity_ah
-    const power_in = data.battery_current * data.battery_voltage;
-    const power_out = data.motor_current * data.motor_voltage;
+    const power_in = data.battery_current * data.battery_voltage/1000;
+    const power_out = data.motor_current * data.motor_voltage/1000;
 
     return (
         <div className="center-screen">
@@ -77,8 +77,8 @@ function App() {
 
                 <ValueBox className="odometer font-face-dot" value={data.odometer} fontsize={30} decimals={2} units="MI" width={250} justify={'right'} />
 
-                <ValueBox className="power-battery font-face-dot" value={power_in} fontsize={30} decimals={0} units="W" width={150} justify={'right'} />
-                <ValueBox className="power-motor font-face-dot" value={power_out} fontsize={30} decimals={0} units="W" width={150} justify={'right'} />
+                <ValueBox className="power-battery font-face-dot" value={power_in} fontsize={40} decimals={2} units="kW" width={175} justify={'right'} />
+                <ValueBox className="power-motor font-face-dot" value={power_out} fontsize={40} decimals={2} units="kW" width={175} justify={'right'} />
 
                 <img src={motorIcon} id="motor-icon" alt="motor temp icon" />
                 <img src={mosfetIcon} id="mosfet-icon" alt="mosfet temp icon" />

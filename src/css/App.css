@@ -195,28 +195,28 @@ body {
 
 .power-battery {
   position: absolute;
-  left: 9%;
-  top: 12%;
+  left: 10%;
+  top: 15%;
   border-radius: 10px;
   font-size: 40px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(61, 85, 67);
+  color: black;
+  background-color: rgb(217, 243, 224);
   box-shadow: 0px 3px 10px 2px black,
     inset 0 0 20px 3px black;
   z-index: 10;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 2px 2px 7px black;
 }
 
 .power-motor {
   position: absolute;
-  left: 9%;
+  left: 10%;
   bottom: 3%;
   border-radius: 10px;
   font-size: 40px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(61, 85, 67);
+  color: black;
+  background-color: rgb(217, 243, 224);
   box-shadow: 0px 3px 10px 2px black,
     inset 0 0 20px 3px black;
   z-index: 10;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 2px 2px 7px black;
 }

@@ -6,7 +6,7 @@ const SoC = ({ className, value, size }) => {
     const gaugeRef = useRef();
 
     let val = value
-    if (isNaN(value))
+    if (isNaN(value) || val < 0.01)
         val = 0.01
     
     const height = size * 2
