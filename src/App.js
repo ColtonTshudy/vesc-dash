@@ -51,18 +51,20 @@ function App() {
     const max_speed = config['max_speed'];
     const capacity_ah = config['capacity_ah'];
     const soc = (capacity_ah - data.ah_consumed) / capacity_ah
+    const power_in = data.battery_current * data.battery_voltage;
+    const power_out = data.motor_current * data.motor_voltage;
 
     return (
         <div className="center-screen">
-            <div className="viewport bg-texture-0 flex-container">
+            <div className="viewport bg-texture-0">
                 <div className='viewport-overlay' />
                 <label className="background">Moped Guage App</label>
 
                 {/* Uncomment this for full CANbus debug information */}
                 {/* {Object.entries(data).map(([key, value]) => <label key={key} className='rawtext'>{key} = {Math.trunc(value * 100) / 100}</label>)} */}
 
-                <TemperatureGauge value={data.mot_temp} className="motor-temp flex-center" min={0} max={100} ticks={5} size={200} />
-                <TemperatureGauge value={data.mos_temp} className="mosfet-temp flex-center" min={0} max={100} ticks={5} size={200} />
+                <TemperatureGauge value={data.mot_temp} className="motor-temp" min={0} max={100} ticks={5} size={200} />
+                <TemperatureGauge value={data.mos_temp} className="mosfet-temp" min={0} max={100} ticks={5} size={200} />
 
                 <Speedometer value={Math.abs(data.mph)} className="speedometer center-gauge" title="" min={0} max={max_speed} ticks={11} size={550} />
                 <ValueBox className={'mph-label'} value='mph' />
@@ -75,6 +77,9 @@ function App() {
 
                 <ValueBox className="odometer font-face-dot" value={data.odometer} fontsize={30} decimals={2} units="MI" width={250} justify={'right'} />
 
+                <ValueBox className="power-battery font-face-dot" value={power_in} fontsize={30} decimals={0} units="W" width={150} justify={'right'} />
+                <ValueBox className="power-motor font-face-dot" value={power_out} fontsize={30} decimals={0} units="W" width={150} justify={'right'} />
+
                 <img src={motorIcon} id="motor-icon" alt="motor temp icon" />
                 <img src={mosfetIcon} id="mosfet-icon" alt="mosfet temp icon" />
                 <img src={batteryIcon} id="battery-icon" alt="battery icon" />
@@ -86,7 +91,7 @@ function App() {
                 <RadialBar className="center-gauge" mirror={true} value={data.motor_voltage} units='V' primaryColor={['lightcoral', 'plum']} secondaryColor1={['palegreen', 'seagreen']} max={58.8} radius={615} strokeWidth={20} start={.6} end={.9} tx='20%' ty='6%' showValue={true} />
                 <RadialBar className="center-gauge" mirror={true} value={data.battery_voltage} units='V' primaryColor={['khaki', 'orange']} secondaryColor={['palegreen', 'seagreen']} min={40} max={58.8} radius={700} strokeWidth={30} start={.63} end={.87} tx='12%' ty='11.5%' showValue={true} />
 
-                <SoC className="soc" value={soc} size={200} />
+                <SoC className="soc" value={soc} size={150} />
 
             </div>
         </div>

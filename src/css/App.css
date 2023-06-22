@@ -40,62 +40,6 @@ body {
   min-height: 100vh;
 }
 
-.rotate-90 {
-  rotate: 90deg;
-}
-
-.rotate-180 {
-  rotate: 180deg;
-}
-
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-.flex-column {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.item {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  background: green;
-}
-
-.item2 {
-  position: absolute;
-  top: 100px;
-  left: 400px;
-  background: green;
-}
-
-.item3 {
-  position: absolute;
-  top: 400px;
-  left: 400px;
-  background: green;
-}
-
-.rounded {
-  border-radius: 200px;
-}
-
 .rawtext {
   font-size: 20px;
 }
@@ -185,8 +129,8 @@ body {
   position: absolute;
   width: 60px;
   filter: invert(100%);
-  left: 3px;
-  bottom: 410px;
+  left: 6px;
+  top: 130px;
 }
 
 #vesc-icon {
@@ -203,21 +147,10 @@ body {
   z-index: 0;
 }
 
-.odometer-bg {
-  position: absolute;
-  left: 50%;
-  bottom: 15%;
-  border-radius: 10px;
-  font-size: 40px;
-  background-color: white;
-  color: lightgrey;
-  z-index: 9;
-}
-
 .soc {
   position: absolute;
   left: 0%;
-  bottom: 5%;
+  bottom: 20%;
 }
 
 .voltmeter {
@@ -258,4 +191,32 @@ body {
   color: rgb(0, 0, 0, 0.25);
   box-shadow: inset 0 0 40px 10px black, 0 0 10px 1px;
   z-index: 9;
+}
+
+.power-battery {
+  position: absolute;
+  left: 9%;
+  top: 12%;
+  border-radius: 10px;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(61, 85, 67);
+  box-shadow: 0px 3px 10px 2px black,
+    inset 0 0 20px 3px black;
+  z-index: 10;
+  text-shadow: 2px 2px 4px black;
+}
+
+.power-motor {
+  position: absolute;
+  left: 9%;
+  bottom: 3%;
+  border-radius: 10px;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(61, 85, 67);
+  box-shadow: 0px 3px 10px 2px black,
+    inset 0 0 20px 3px black;
+  z-index: 10;
+  text-shadow: 2px 2px 4px black;
 }

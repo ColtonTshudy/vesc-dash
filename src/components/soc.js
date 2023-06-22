@@ -10,7 +10,7 @@ const SoC = ({ className, value, size }) => {
         val = 0.01
     
     const height = size * 2
-    const width = size / 3
+    const width = size / 2
     var justify = Math.floor(Math.log10(val)) < 1 ? 'center' : 'left'
     
     useEffect(() => {
@@ -51,7 +51,7 @@ const SoC = ({ className, value, size }) => {
                 position: 'absolute',
                 width: `57px`,
                 height: `40px`,
-                bottom: '-2%',
+                bottom: '-5%',
                 left: '5%',
                 borderRadius: '10px',
                 fontFamily: 'Rubik',
