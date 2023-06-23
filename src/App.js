@@ -75,6 +75,9 @@ function App() {
                 <ValueBox className="speed-ro center-gauge font-face-segment" value={data.mph} fontsize={100} width={250} justify={'right'} />
                 <ValueBox className="speed-ro-bg center-gauge font-face-segment" value={'~~~'} fontsize={100} width={250} justify={'right'} />
 
+                <ValueBox className="efficiency font-face-segment" value={power_out/power_in} units={'%'} fontsize={40} width={100} justify={'right'} />
+                <ValueBox className="efficiency-bg font-face-segment" value={'~~'} units={'~'} fontsize={40} width={100} justify={'right'} />
+
                 <ValueBox className="odometer font-face-dot" value={data.odometer} fontsize={30} decimals={2} units="MI" width={250} justify={'right'} />
 
                 <ValueBox className="power-battery font-face-dot" value={power_in} fontsize={40} decimals={2} units="kW" width={175} justify={'right'} />
