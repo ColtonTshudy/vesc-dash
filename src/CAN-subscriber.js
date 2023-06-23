@@ -16,6 +16,10 @@ import { io } from 'socket.io-client'
 
 // - add heat sink to raspi, flip raspi mount location
 //   upside down a la controls box to keep watertight
+// - add "CAN OK" statuses to check which packets are coming in
+// - add realtime kW consumption RO for motor & battery,
+//   also show percentage efficiency
+// - change shape of acrylic (head bend) to not reflect sunlight
 
 
 class Socket {
