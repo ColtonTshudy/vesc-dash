@@ -193,7 +193,7 @@ body {
   z-index: 9;
 }
 
-.power-battery {
+.power-motor {
   position: absolute;
   left: 10%;
   top: 15%;
@@ -207,7 +207,7 @@ body {
   text-shadow: 2px 2px 7px black;
 }
 
-.power-motor {
+.power-battery {
   position: absolute;
   left: 10%;
   bottom: 3%;

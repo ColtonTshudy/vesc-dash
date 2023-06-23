@@ -80,7 +80,7 @@ function App() {
                 <ValueBox className="odometer font-face-dot" value={data.odometer} fontsize={30} decimals={2} units="MI" width={250} justify={'right'} />
 
                 <ValueBox className="power-battery font-face-dot" value={power_in} fontsize={40} decimals={2} units="kW" width={175} justify={'right'} />
-                <ValueBox className="power-motor font-face-dot" value={power_out} fontsize={40} decimals={2} units="kW" width={175} justify={'right'} />
+                {/* <ValueBox className="power-motor font-face-dot" value={power_out} fontsize={40} decimals={2} units="kW" width={175} justify={'right'} /> */}
 
                 <img src={motorIcon} id="motor-icon" alt="motor temp icon" />
                 <img src={mosfetIcon} id="mosfet-icon" alt="mosfet temp icon" />
