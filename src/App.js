@@ -69,14 +69,13 @@ function App() {
                 <Speedometer value={Math.abs(data.mph)} className="speedometer center-gauge" title="" min={0} max={max_speed} ticks={11} size={550} />
                 <ValueBox className={'mph-label'} value='mph' />
 
-                <DateTime className="clock-new font-face-dot" fontsize={40} width={250} justify={'center'} />
+                <DateTime className="clock-new font-face-rubik" fontsize={30} width={600} justify={'center'} />
 
                 <ValueBox className="voltmeter font-face-segment" value={data.battery_voltage} units='V' decimals={1} fontsize={60} width={210} justify={'right'} />
                 <ValueBox className="speed-ro center-gauge font-face-segment" value={data.mph} fontsize={100} width={250} justify={'right'} />
                 <ValueBox className="speed-ro-bg center-gauge font-face-segment" value={'~~~'} fontsize={100} width={250} justify={'right'} />
 
-                <ValueBox className="efficiency font-face-segment" value={power_out/power_in} units={'%'} fontsize={40} width={100} justify={'right'} />
-                <ValueBox className="efficiency-bg font-face-segment" value={'~~'} units={'~'} fontsize={40} width={100} justify={'right'} />
+                <ValueBox className="efficiency font-face-rubik" value={power_out/power_in*100} units={'%'} fontsize={40} width={200} justify={'right'} />
 
                 <ValueBox className="odometer font-face-dot" value={data.odometer} fontsize={30} decimals={2} units="MI" width={250} justify={'right'} />
 

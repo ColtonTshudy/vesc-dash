@@ -28,7 +28,7 @@ const DateTime = ({ className, fontsize, width, justify }) => {
             fontSize: `${fontsize}px`,
             padding: `${padding}px`,
         }}>
-            {`${date.toLocaleTimeString()}`}
+            {date.toLocaleTimeString('en-us',{hour:'2-digit', minute:'2-digit'})} <span style={{color:'#aaa'}}>{date.toLocaleDateString('en-us',{ weekday: 'long', month: 'long', day: 'numeric' })}</span>
         </div>
     )
 }

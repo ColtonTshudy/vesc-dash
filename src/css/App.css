@@ -222,21 +222,10 @@ body {
 }
 
 .efficiency {
-  position: 'absolute';
-  left: 50%;
-  bottom: 20%;
+  position: absolute;
+  left: 46%;
+  bottom: 32%;
   color: #ffffff;
-  text-shadow: 0 0 10px rgb(255, 255, 255, 1);
+  text-shadow: 4px 4px 5px black;
   z-index: 10;
-}
-
-.efficiency-bg {
-  position: 'absolute';
-  left: 50%;
-  bottom: 20%;
-  background-color: rgb(61, 85, 67);
-  border-radius: 30px;
-  color: rgb(0, 0, 0, 0.25);
-  box-shadow: inset 0 0 40px 10px black, 0 0 10px 1px;
-  z-index: 9;
 }
