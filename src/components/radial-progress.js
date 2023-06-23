@@ -33,8 +33,8 @@ const RadialBar = ({
     mirror,
     tx,
     ty,
-    background=true,
-    showValue=false,
+    background,
+    showValue,
     units,
 }) => {
     // Clamp to range, allow for negative numbers if bottom range is 0
@@ -45,7 +45,7 @@ const RadialBar = ({
     const PI = 3.14
     const R = (radius - strokeWidth) / 2
     const xScale = mirror ? -1 : 1
-    const bg = background ? 'rgb(0,0,0,.8)' : 'rgb(0,0,0,0)'
+    const bg = background ? 'rgb(0,0,0,.6)' : 'rgb(0,0,0,0)'
     const textVisible = showValue? 'visible' : 'hidden'
 
     let color = []
@@ -145,6 +145,8 @@ RadialBar.defaultProps = {
     primaryColor: ['#00BBFF', '#92d7f1'],
     secondaryColor: ['rgb(0,0,0,0)', 'rgb(0,0,0,0)'],
     fill: 'transparent',
+    background: true,
+    shwoValue: false,
 }
 
 export default RadialBar
